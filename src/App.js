@@ -17,10 +17,6 @@ class Grid extends Component{
   click(i,j){
     console.log(i,j);
   }
-  // constructor(props){
-  //   super(props);
-  // }
-
   render(){
     return(
         <table>
