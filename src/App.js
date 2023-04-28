@@ -23,7 +23,7 @@ class Grid extends Component{
           <thead>
             <tr>
             {this.days.map((day) => (
-                <th>{day}</th>
+                <th key ={day}>{day}</th>
             ))
             }
             </tr>
@@ -31,9 +31,9 @@ class Grid extends Component{
           <tbody>
           {
           this.times.map((time,i) => (
-            <tr>
+            <tr key = {time}>
               {this.days.map((day,j) => (
-              <TimeSlot onClick = {() => this.click(i,j)} time={time}/>
+              <TimeSlot key = {j*this.days.length + i} onClick = {() => this.click(i,j)} time={time}/>
               ))
               }
             </tr>
@@ -48,7 +48,7 @@ class Grid extends Component{
 function TimeSlot(props){
   return(
       <td>
-        <div key = {props.key} onClick = {() => props.onClick()} className = "time">
+        <div onClick = {() => props.onClick()} className = "time">
           {props.time}
         </div>
       </td>
