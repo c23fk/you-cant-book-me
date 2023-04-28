@@ -26,7 +26,7 @@ table {
   height: 50px;
   border-radius:10px;
   border-color: black;
-  border-width: 1px;
+  border-width: 3px;
   border-style: solid;
   background-color: white;
   display:inline-block;
@@ -35,7 +35,7 @@ table {
 }
 
 .time:hover{
-  background-color: rgb(79, 153, 143);
+  background-color: rgb(79, 155, 143);
   color: white;
 }
 
